@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# Book Management Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Objective:
+Design and implement a Book Management System that allows users to search for books, view details, and manage book records efficiently.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Requirements
 
-### `npm start`
+### User Interface (UI):
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Home Page:
+- **Navigation Bar:** Includes links to the following pages:
+  - Home
+  - Contact
+  - About
+  - Add Book
+- **Search Section:** 
+  - A search box for users to search by title, author, or genre.
+  - Search filters (e.g., genres, authors).
+  - A search button to trigger the book search.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Search Results Page:
+- Display books in a grid or list format with pagination.
+- Options to view details, edit, or delete a book record.
 
-### `npm test`
+#### Book Details Page:
+- Display detailed information about a selected book:
+  - Title
+  - Author
+  - Genre
+  - Pages
+  - Published Date
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Book Management Pages:
+- Forms for adding and editing book details, with appropriate input validations.
+- Confirmation step for book deletion.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Database Schema:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Books Table:    
+| BookID         | INTEGER      | Primary Key                           
+| Title          | VARCHAR(255) | Title of the book                    
+| AuthorID       | INTEGER      | Foreign Key to Authors Table         
+| GenreID        | INTEGER      | Foreign Key to Genres Table          
+| Pages          | INTEGER      | Number of pages in the book         
+| PublishedDate  | DATE         | Date of publication                   
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Genres Table:
+| GenreID        | INTEGER      | Primary Key                          
+| Name           | VARCHAR(255) | Genre name                          
+| Description    | TEXT         | Description of the genre            
 
-### `npm run eject`
+#### Authors Table:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| AuthorID       | INTEGER      | Primary Key                          
+| Name           | VARCHAR(255) | Author name                          
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Development Plan
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Frontend:
+- **React.js**: Use React.js as the framework for building the user interface.
+- **Components**:
+  - **Home Page**: Displays the navigation bar and search section.
+  - **Search Results**: Displays the list of books with pagination.
+  - **Book Details**: Displays detailed information about a specific book.
+  - **Add/Edit Book**: Provides forms for adding or editing a book’s details.
+  - **Delete Book**: Provides a confirmation prompt for deleting a book.
+- **Fetch API**: Use the Fetch API to communicate with the backend API to retrieve and send book data.
 
-## Learn More
+### Backend:
+- **Node.js** and **Express.js** for developing the RESTful API endpoints.
+- **API Endpoints**:
+  - `GET /books`: Fetch all books.
+  - `POST /books`: Add a new book to the collection.
+  - `PUT /books/:id`: Update the details of an existing book.
+  - `DELETE /books/:id`: Delete a book from the collection.
+  
+### Database:
+- Use a **relational database** like **SQLite** to store the book, author, and genre data.
+  
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Prerequisites:
+- Node.js installed on your machine.
+- A code editor (VSCode)
+- A terminal/command line tool.
 
-### Code Splitting
+### Setup Instructions:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Clone the repository:
+```bash
+git clone (https://github.com/Prasanth2659/book-management-app.git)
