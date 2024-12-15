@@ -1,0 +1,180 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+  }
+  
+  /* Navbar Styles */
+  nav {
+    background-color: hsla(165, 38%, 42%, 0.744);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 1rem;
+  }
+  
+  nav a:hover {
+    text-decoration: none;
+  }
+  
+  /* Home Page Styles */
+  h1 {
+    text-align: center;
+    margin: 2rem 0;
+    color: white;
+  }
+  
+  form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  form input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    width: 300px;
+  }
+  
+  form button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #005bb5;
+  }
+  
+  /* Search Results Styles */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    background: white;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  li a {
+    color: #0073e6;
+    font-weight: bold;
+  }
+  
+  li button {
+    background-color: #e60000;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  li button:hover {
+    background-color: #b30000;
+  }
+  
+  /* Book Details Styles */
+  .book-details {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: white;
+
+
+  }
+  
+  .book-details h2 {
+    margin-bottom: 1rem;
+    color: #0073e6;
+  }
+  
+  .book-details p {
+    margin: 0.5rem 0;
+  }
+  .book-details-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .author{
+    font-size: 30px;
+  }
+  
+  /* Add/Edit Book Styles */
+  form {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  form button {
+    height: 40px;
+    width: 100px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  form button:hover {
+    background-color: #005bb5;
+  }
+  
+  /* About.js */ 
+
+  .discription{
+    font-size: 22px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  .contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .maillink{
+    color: white;
+    text-decoration: none;
+  }
